@@ -5,12 +5,18 @@
 }
 
 .container-fluid {
-    padding: 20px;
+    padding: 20px 0px 20px 20px; /* Chỉ còn padding trái, top, bottom */
+}
+
+.d-flex.flex-wrap {
+    flex-wrap: wrap !important; /* Đảm bảo các item tự động xuống dòng khi không đủ chỗ */
 }
 
 .left {
     width: 30%;
     height: 80vh;
+    min-width: 320px; /* Đảm bảo tối thiểu trên mobile */
+    margin-bottom: 12px;
 }
 
 .right {
@@ -33,6 +39,7 @@ input[type="file"] {
 
 #imagePreview, #processedImagePreview {
     min-height: 200px;
+    min-width: 200px;
     border: 2px dashed #ccc;
     border-radius: 8px;
     display: flex;
@@ -74,11 +81,24 @@ input[type="file"] {
     cursor: not-allowed;
 }
 
+.control-panel {
+    width: 260px;
+    min-width: 200px;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 0 !important; /* không cách phải */
+}
+.control-panel .card {
+    width: 100%;
+}
+
 /* Responsive design */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .card {
         width: 100%;
-        max-width: 400px;
+        max-width: 480px;
     }
     
     .d-flex {
@@ -87,6 +107,16 @@ input[type="file"] {
     
     .left, .right {
         width: 100%;
+        min-width: 200px;
         height: auto;
+        margin-right: 0;
+    }
+    .control-panel {
+        width: 100%;
+        min-width: unset;
+        max-width: unset;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 16px;
     }
 }
