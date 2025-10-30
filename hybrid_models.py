@@ -9,7 +9,7 @@ class HybridDetector:
     để detect tất cả các object types
     """
     
-    def __init__(self, original_model_path="./model_weights/yolov8n.pt", custom_model_path='./model_weights/best.pt'):
+    def __init__(self, original_model_path="./model_weights/yolov8n.pt", custom_model_path='./model_weights/last.pt'):
         """
         Args:
             original_model_path: Path to original YOLOv8 model (80 COCO classes)
@@ -249,7 +249,7 @@ class HybridDetector:
     #     return save_path
 
 
-def detect_image_hybrid(original_model="./model_weights/yolov8n.pt", custom_model='./model_weights/best.pt', image_path=None, conf=0.30, show=False):
+def detect_image_hybrid(original_model="./model_weights/yolov8n.pt", custom_model='./model_weights/last.pt', image_path=None, conf=0.30, show=False):
     """
     Convenience function for hybrid detection
     """
