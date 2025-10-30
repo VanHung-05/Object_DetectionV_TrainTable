@@ -189,6 +189,6 @@ if __name__ == '__main__':
             print("Both standard and hybrid models are available")
         else:
             print("Standard model only - hybrid detection may not work")
-        app.run(host='0.0.0.0', port=5000, debug=True)
+        app.run(host='0.0.0.0', port=5001, debug=True)
     else:
         print("Failed to load models. Please check dependencies.")
