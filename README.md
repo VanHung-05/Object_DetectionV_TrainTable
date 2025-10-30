@@ -15,7 +15,7 @@
 ```bash
 python3 app.py
 ```
-Truy cập: http://localhost:5000
+Truy cập: http://localhost:5001
 
 ### 2. Image Detection
 1. Chọn file ảnh (JPG, PNG)
